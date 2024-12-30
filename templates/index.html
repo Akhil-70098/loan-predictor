@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personal Loan Predictor</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="loans HTML Template">
+	<meta name="keywords" content="loans, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Favicon -->
+	<link href="{% static "img/favicon.ico" %}" rel="shortcut icon"/>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+ 
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}"/>
+	<link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}"/>
+	<link rel="stylesheet" href="{% static "css/owl.carousel.min.css" %}"/>
+	<link rel="stylesheet" href="{% static "css/flaticon.css" %}"/>
+	<link rel="stylesheet" href="{% static "css/slicknav.min.css" %}"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="{% static "css/style.css" %}"/>
+
+
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header Section -->
+	<header class="header-section">
+		<a href="#" class="site-logo">
+			<img src="{% static "img/logo.png" %}" alt="">
+		</a>
+		
+	</header>
+	<!-- Header Section end -->
+
+	<!-- Hero Section  -->
+	<section class="hero-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="hs-text">
+						<h2>Looking for a same day loan?</h2>
+						<p>Donec eget efficitur ex. Donec eget dolor vitae eros feugiat tristique id vitae massa. Proin vulputate congue rutrum. Fusce lobortis a enim eget tempus. Class aptent taciti sociosqu ad litora torquent per conubia.</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<form class="hero-form" method="post">
+						<input type="text" name="name"  placeholder="Your Name"  required>
+						<input type="email" name="mail"  placeholder="Your E-mail" required>
+						<input type="tel" name="mobile"  placeholder="Mobile No"  required>
+						<select id="gender" name="gender" required>
+						 <option value="none" selected>Gender</option>	
+                         <option value="1">Male</option>
+                         <option value="0">Female</option> 
+						 </select>
+						 <select id="marital" name="marital" required>
+						 	<option value="none" selected>Marital Status</option>
+						 	<option value="1">Married</option>
+						 	<option value="0">Unmarried</option>
+						 </select>
+						 <select id="education" name="education" required>
+						 	<option value="none" selected>Educational Qualification</option>
+						 	<option value="1">Graduation</option>
+						 	<option value="0">Non-Graduation</option>
+						 </select>
+						 <br><br>
+						 <select id="selfemployment" name="selfemployment" required>
+						 	<option value="none" selected>Self Employment</option>
+						 	<option value="1">Yes</option>
+						 	<option value="0">No</option>
+						 </select>
+						 <br><br>
+						 <input type="number" name="income"  placeholder="Enter the monthly income"  minlength="4" maxlength="10" required>
+						 <input type="text" name="co-app"  placeholder="Co-Applicant Name"  required>
+						 <input type="number" name="co-income" placeholder="Enter the monthly income of Co-Applicant"  minlength="4" maxlength="10" required>
+						 <input type="number" name="loan-amount" placeholder="Enter the amount of loan required"  minlength="4" maxlength="10" required>
+						 <br>
+						 <select id="loan-term" name="loan-term" required>
+						 <option value="none" selected>Loan term in days</option>	
+                         <option value="180">180</option>
+                         <option value="210">210</option>
+                         <option value="240">240</option>
+                         <option value="270">270</option>
+                         <option value="300">300</option>
+                         <option value="330">330</option>
+                         <option value="360">360</option>
+                         </select>
+                         <select id="credit_history" name="credit_history" required>
+						 <option value="none" selected>Credit History</option>	
+                         <option value="0">Yes</option>
+                         <option value="1">No</option>
+						 </select>
+						 <br><br>
+						 <select id="dependents" name="dependents" required>
+						 <option value="none" selected>Dependents</option>	
+                         <option value="0">0</option>
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3+">3+</option>  
+						 </select>
+						 <br><br>
+						 <select id="property" name="property" required>
+						 <option value="none" selected>Property Location</option>	
+                         <option value="rural">Rural</option>
+						 <option value="semi urban">Semi Urban</option>
+                         <option value="urban">Urban</option> 
+						 </select>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+						<button class="site-btn">Apply for a loan now!</button>
+						{% csrf_token %}
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="hero-slider owl-carousel">
+			<div class="hs-item set-bg" data-setbg="{% static "img/hero-slider/1.jpg"%}"></div>
+			<div class="hs-item set-bg" data-setbg="{% static "img/hero-slider/2.jpg"%}"></div>
+			<div class="hs-item set-bg" data-setbg="{% static "img/hero-slider/3.jpg"%}"></div>
+		</div>
+	</section>
+	<!-- Hero Section end -->
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="{% static "js/jquery-3.2.1.min.js" %}"></script>
+	<script src="{% static "js/bootstrap.min.js" %}"></script>
+	<script src="{% static "js/jquery.slicknav.min.js" %}"></script>
+	<script src="{% static "js/owl.carousel.min.js" %}"></script>
+	<script src="{% static "js/jquery-ui.min.js" %}"></script>
+	<script src="{% static "js/main.js" %}"></script>
+
+	</body>
+</html>

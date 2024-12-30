@@ -1,0 +1,26 @@
+.row,#row1
+{
+    text-align: center;
+    font-size: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding-top: 10px;
+};
+#res
+{
+    font-size: 50px;
+}
+/*#lolo
+{
+    padding: 0;
+    list-style: none;
+};*/
+.safe
+{
+    color: green;
+}
+.danger
+{
+    color: #ff0000;
+}
