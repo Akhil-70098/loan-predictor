@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as nu
 from numpy import *
 
-data = pd.read_csv("C:/Datasets_for_Problem_Statements/p3 - loan prediction/modified.csv")
+data = pd.read_csv("modified.csv")
 idcol = ['Loan_ID']
 data.drop(['Unnamed: 0'],axis=1,inplace=True)
 
@@ -25,5 +25,5 @@ from sklearn import metrics
 metrics.accuracy_score(y_pred,test[target])
 
 import pickle
-with open('mlModel.pkl','wb') as handle:
+with open('mlModel.pickle','wb') as handle:
     pickle.dump(regressor,handle,pickle.HIGHEST_PROTOCOL)

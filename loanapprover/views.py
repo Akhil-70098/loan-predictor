@@ -7,8 +7,8 @@ list5=[[]]
 list3=[]
 era=[]
 koro=0
-temp = pickle.load(open('mlModel.pkl','rb'))
-temp2 = pickle.load(open('interest.pkl','rb'))
+temp = pickle.load(open('mlModel.pickle','rb'))
+temp2 = pickle.load(open('interest.pickle','rb'))
 def insert(list1):
     list2=[]
     list2.append(list1)
