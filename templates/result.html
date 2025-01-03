@@ -49,17 +49,17 @@
 	<section class="hero-section bg-dark">
     <div class="container bg-dark text-white">
 			<div>
-					{% if tuput == 1 %}
+					{% if isapproved == 1 %}
 						<h2 id="res" style="text-align:center"><span class="text-success">{{result}}</span>✔️</h2>
-					{% elif tuput == 0 %}
+					{% elif isapproved == 0 %}
 						<h2 id="res" style="text-align:center"><span class="text-danger">{{result}}</span>❌</h2>
 					{% endif %}
 			</div>
 			<br><br>
 			<div>
-					   {% if tuput == 1 %}
-							<h3 style="text-align:center">{{result2}}</h3>
-							<h4 style="text-align:center">{{result3}}</h4>
+					   {% if isapproved == 1 %}
+							<h3 style="text-align:center">{{interestresult}}</h3>
+							<h4 style="text-align:center">{{bankoffer}}</h4>
 						{% else%}
 					   			<h4 style="text-align:center">Reasons for not getting loan:</h4><br>
 								<ol>
